@@ -1,0 +1,509 @@
+{% extends "base1.html" %}
+
+{% block contentA%}
+	<title>Facility status overview< </title>
+
+	<script>
+	<!--
+	function timedRefresh(timeoutPeriod) {
+		setTimeout("location.reload(true);",timeoutPeriod);
+	}
+
+	window.onload = timedRefresh(1800000); //   -->
+	</script>
+
+{% endblock %}
+
+{% block contentB%}
+
+<div class="caption">
+  	<span class="border">FACILITY OVERVIEW</span>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+  	<span class="border">scroll down</span>
+ </div>
+	<br>
+
+	<div class="parallax"></div>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 1 <<<=== </h1>
+	<hr>
+	<div id="jg1" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk1   == 0 %} 
+			<a href="/toggle/k1/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k1/down">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k1" alt="Image Placeholder" width="34%">
+	<hr>
+	<a href="/emi/emik1" target=”_blank”>
+	<img src="/emi/emik1" alt=".....emi data coming soon..." width="24%"></a>
+	<a href="/graph/tempk1" target=”_blank”>
+	<img src="/graph/tempk1" alt="..... data coming soon ....." width="24%"></a>
+	<a href="/graph/humk1" target=”_blank”></a>
+	<a href="/graph/humk1" target=”_blank”>
+	<img src="/graph/humk1" alt=".....Humidity data coming soon ....." width="24%"></a>
+	<a href="/graph/pHk21" target=”_blank”>
+	<img src="/graph/pHk21" alt="....pH data coming soon..." width="24%"></a>
+	<hr>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 2 <<<=== </h1>
+	<hr>
+	<div id="jg2" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk2   == 0 %} 
+			<a href="/toggle/k2/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k2/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k2" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/emi/emik2" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk2" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk2" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk22" alt="Image Placeholder" width="24%">
+	<hr>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 3 <<<=== </h1>
+	<hr>
+	<div id="jg3" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk3   == 0 %} 
+			<a href="/toggle/k3/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k3/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k3" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/emi/emik3" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk3" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk3" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk23" alt="Image Placeholder" width="24%">
+	<hr>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 4 <<<=== </h1>
+	<hr>
+	<div id="jg4" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk4   == 0 %} 
+			<a href="/toggle/k4/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k4/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k4" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/emi/emik4" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk4" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk4" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk24" alt="Image Placeholder" width="24%">
+	<hr>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 5 <<<=== </h1>
+	<hr>
+	<div id="jg5" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk5   == 0 %} 
+			<a href="/toggle/k5/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k5/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k5" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/emi/emik5" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk5" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk5" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk25" alt="Image Placeholder" width="24%">
+	<hr>
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<h1> ===>>> Krios 6 <<<=== </h1>
+	<hr>
+	<div id="jg6" class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk6   == 0 %}
+			<a href="/toggle/k6/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k6/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k6" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/emi/emik6" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk6" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk6" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk26" alt=".....pH data coming soon ....." width="24%">
+	<hr>
+	<div class="parallax"></div>
+	<h1> ===>>> Krios 7 <<<=== </h1>
+	<hr>
+	<div id="jg7" class="gauge size-2"></div>
+	<img src="../static/images/gn-4-bkp.png" alt=".....Uptime data coming soon ....." width="20%">
+			{% if  downk7   == 0 %} 
+			<a href="/toggle/k7/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k7/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k7" alt="Image Placeholder" width="35%" >
+	<hr>
+	<img src="/emi/emik7" alt=".....emi data coming soon..." width="24%">
+	<img src="/graph/tempk7" alt=".....Temperature data coming soon ....." width="24%">
+	<img src="/graph/humk7" alt=".....Humidity data coming soon ....." width="24%">
+	<img src="/graph/pHk27" alt=".....pH data coming soon ....." width="24%">
+	<hr>
+	<div class="parallax"></div>
+	<h1> ===>>> Glacios <<<=== </h1>
+	<hr>
+	<div id="jg8" class="gauge size-2"></div>
+	<img src="../static/images/glacios-3.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk8   == 0 %}
+			<a href="/toggle/k8/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %}
+			<a href="/toggle/k8/up">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+	<img src="/graph/ln2k8" alt="Image Placeholder" width="34%">
+	<hr>
+	<img src="/graph/tempk8" alt=".....Temperature data coming soon ....." width="30%">
+	<img src="/graph/humk8" alt=".....Humidity data coming soon ....." width="30%">
+	<img src="/graph/pHk28" alt="Image Placeholder" width="30%">
+	<hr>
+	<div class="parallax"></div>
+	<hr>
+	<img src="/graph/tempk11" alt=".....Temperature data coming soon - currently too few data points....." width="30%">
+	<img src="/graph/humk11" alt=".....Humidity data coming soon - currently too few data points....." width="30%">
+	<img src="/graph/fr1" alt="Image Placeholder" width="30%">
+	<hr>
+	<img src="/graph/tempk12" alt=".....Temperature data coming soon" width="30%">
+	<img src="/graph/humk12" alt=".....Humidity data coming soon" width="30%">
+	<img src="/graph/duty1" alt=".....Humidity data coming soon" width="30%">
+	<hr>
+	<img src="/graph/tempk18" alt=".....Temperature data coming soon" width="30%">
+	<img src="/graph/humk18" alt=".....Humidity data coming soon" width="30%">
+	<img src="/graph/duty2" alt=".....Humidity data coming soon" width="30%">
+	<hr>
+	<img src="/graph/tempk14" alt=".....Temperature data coming soon" width="30%">
+	<img src="/graph/humk14" alt=".....Humidity data coming soon" width="30%">
+	<hr>
+	<br>
+
+<div class="parallax"></div>
+	<div style="height:800px;background-color:OldLace;font-size:16px">
+	<br>
+	<h1> Facility Monitor - large data analysis </h1>
+	<br>
+	<hr>	
+	<h3> Last Sensors Reading: {{ time }} ==> <a href="/"class="button">REFRESH</a>
+	<br>
+	<br>
+	     Data is up to date - connected by Raspberry PI 
+	</h3>
+	<br>
+	<hr>
+	<p> Enter number of minutes to retrieve:</p>
+	<form method="POST">
+		<input name="numsamples" value= {{numsamples}}>
+		<input type="submit">
+	<hr>
+	<h3> TARE DATA LN2 tanks [lb.]</h3><p>
+		Krios 1: <input name="tarek1" value= {{tarek1}}><br>
+		Krios 2: <input name="tarek2" value= {{tarek2}}><br>
+		Krios 3: <input name="tarek3" value= {{tarek3}}><br>
+		Krios 4: <input name="tarek4" value= {{tarek4}}><br>
+		Krios 5: <input name="tarek5" value= {{tarek5}}><br>
+		Krios 6: <input name="tarek6" value= {{tarek6}}><br>
+		Krios 7: <input name="tarek7" value= {{tarek7}}><br>
+		Glacios: <input name="tarek8" value= {{tarek8}}><br>
+		<h3><input type="submit"><br></h3>
+		</form></p>
+	</div>
+	<br>
+
+    <script src="../static/raphael-2.1.4.min.js"></script>
+    <script src="../static/justgage.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var jg1, jg2, jg3, jg4, jg5, jg6, jg7, jg8;
+
+        var defs1 = {
+            label: "Nett weight [lb] \n LN2 Krios 1",
+            value: {{ nettk1 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs2 = {
+            label: "Nett weight [lb] \n LN2 Krios 2",
+            value: {{ nettk2 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs3 = {
+            label: "Nett weight [lb] \n LN2 Krios 3",
+            value: {{ nettk3 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs4 = {
+            label: "Nett weight [lb] \n LN2 Krios 4",
+            value: {{ nettk4 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs5 = {
+            label: "Nett weight [lb] \n LN2 Krios 5",
+            value: {{ nettk5 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs6 = {
+            label: "Nett weight [lb] \n LN2 Krios 6",
+            value: {{ nettk6 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs7 = {
+            label: "Nett weight [lb] \n LN2 Krios 7",
+            value: {{ nettk7 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs8 = {
+            label: "Nett weight [lb] \n LN2 Glacios",
+            value: {{ nettk8 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#f9c802", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs22 = {
+            label: "label",
+            value: 35,
+            min: 0,
+            max: 320,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            donut: true,
+            relativeGaugeSize: true
+        }
+
+        jg1 = new JustGage({
+            id: "jg1",
+            defaults: defs1
+        });
+
+        jg2 = new JustGage({
+            id: "jg2",
+            defaults: defs2
+        });
+
+        jg3 = new JustGage({
+            id: "jg3",
+            defaults: defs3
+        });
+
+        jg4 = new JustGage({
+            id: "jg4",
+            defaults: defs4
+        });
+
+        jg5 = new JustGage({
+            id: "jg5",
+            defaults: defs5
+        });
+
+        jg6 = new JustGage({
+            id: "jg6",
+            defaults: defs6
+        });
+
+        jg7 = new JustGage({
+            id: "jg7",
+            defaults: defs7
+        });
+
+        jg8 = new JustGage({
+            id: "jg8",
+            defaults: defs8
+        });
+
+    });
+    </script>
+
+{% endblock %}

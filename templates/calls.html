@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+	<link rel="stylesheet" href='../../../static/style1.css'/>
+	<title>Call status editor </title>
+</head>
+
+<body>
+	<br>
+	<hr>
+	<hr>
+	<br>
+	<img src="../../../static/images/semc-logo-new.png" alt="Italian" class="center">
+	<hr>
+	<div style="width:100%;background-color:OldLace">
+	<br>
+
+			{% if  update.down %} 
+			<a href="/toggle/k1/down">
+	<img src="../../../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k1/up">
+	<img src="../../../static/images/green.png"  width="5%" style = "float:center"></a>
+			{% endif %}
+
+	<h1 style="text-align:center;">Update system status for {{update.system}}</h1>
+	<br>
+    	<form action="" method="post" novalidate>
+		{{ form.hidden_tag() }}
+       	<p>
+            {{ form.call.label }}<br>
+            {{ form.call(cols=128, rows=8) }}<br>
+            {% for error in form.call.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+	</p>
+	<p>
+            {{ form.step.label }}<br>
+            {{ form.step(cols=128, rows=8) }}<br>
+            {% for error in form.step.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+	</p>
+        <p>{{ form.submit() }}</p>
+	</form>
+	<br>
+	<p> @2021 Developed by NYSBC.org</p>
+	</div>
+
+	<div class="parallax"></div>
+	<div style="height:1000px;background-color:OldLace;font-size:16px">
+   </body>
+</html>

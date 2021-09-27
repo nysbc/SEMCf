@@ -1,0 +1,308 @@
+{% extends "base1.html" %}
+
+{% block contentA%}
+	<title>Facility status overview -live< </title>
+
+	<script>
+	<!--
+	function timedRefresh(timeoutPeriod) {
+		setTimeout("location.reload(true);",timeoutPeriod);
+	}
+
+	window.onload = timedRefresh(45000); //   -->
+	</script>
+
+
+{% endblock %}
+
+{% block contentB%}
+
+<div class="caption">
+	<br>
+	<br>
+ </div>
+
+	<br>
+	<hr>
+			{% if  link1   == 'y' %} 
+	<div id={{link2}} class="gauge size-2"></div>
+	<img src="../static/images/gen3a-1.png" alt=".....Uptime data coming soon ....." width="27%">
+			{% if  downk1   == 0 %} 
+			<a href="/toggle/k1/up">
+	<img src="../static/images/green.png"  width="5%" style = "float:left"></a>
+			{% else %} 
+			<a href="/toggle/k1/down">
+	<img src="../static/images/red.png"  width="5%" style = "float:left"></a>
+			{% endif %}
+
+	<img src={{link3}} alt="Image Placeholder" width="34%">
+	<hr>
+	<img src={{link4}} alt="..... data coming soon..." width="24%">
+	<img src={{link5}} alt="..... data coming soon ....." width="24%">
+	<img src={{link6}} alt="..... data coming soon ....." width="24%">
+	<img src={{link7}} alt="..... data coming soon ....." width="24%">
+			{% else %} 
+	<div class="parallax"></div>
+	<img src={{link2}} alt="..... data coming soon..." width="22%" >
+	<img src={{link3}} alt="..... data coming soon..." width="22%" >
+	<img src={{link5}} alt="..... data coming soon..." width="22%" style = "float:right">
+	<img src={{link4}} alt="..... data coming soon..." width="22%" style = "float:right">
+	<hr>
+	<img src={{link6}} alt="..... data coming soon..." width="22%" >
+	<img src={{link7}} alt="..... data coming soon..." width="22%" >
+	<img src={{link9}} alt="..... data coming soon..." width="22%" style = "float:right">
+	<img src={{link8}} alt="..... data coming soon..." width="22%" style = "float:right">
+			{% endif %}
+	<hr>
+	<div class="parallax"></div>
+	<div class="parallax"></div>
+	<hr>
+	<br>
+
+	<div class="parallax"></div>
+	<div style="height:800px;background-color:OldLace;font-size:16px">
+	<br>
+	<h1> Facility Monitor - large data analysis </h1>
+	<br>
+	<hr>	
+	<h3> Last Sensors Reading: {{ time }} ==> <a href="/"class="button">REFRESH</a>
+	<br>
+	<br>
+	     Data is up to date - connected by Raspberry PI 
+	</h3>
+	<br>
+	<hr>
+	<p> Enter number of minutes to retrieve:</p>
+	<form method="POST">
+		<input name="numsamples" value= {{numsamples}}>
+		<input type="submit">
+	<hr>
+	</form></p>
+	</div>
+	<br>
+
+    <script src="../static/raphael-2.1.4.min.js"></script>
+    <script src="../static/justgage.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var jg1, jg2, jg3, jg4, jg5, jg6, jg7, jg8;
+
+        var defs1 = {
+            label: "net weight [lb] \n LN2 Krios 1",
+            value: {{ nettk1 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs2 = {
+            label: "net weight [lb] \n LN2 Krios 2",
+            value: {{ nettk2 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs3 = {
+            label: "net weight [lb] \n LN2 Krios 3",
+            value: {{ nettk3 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs4 = {
+            label: "net weight [lb] \n LN2 Krios 4",
+            value: {{ nettk4 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs5 = {
+            label: "net weight [lb] \n LN2 Krios 5",
+            value: {{ nettk5 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            showInnerShadow: true,
+            shadowVerticalOffset: 9,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs6 = {
+            label: "net weight [lb] \n LN2 Krios 6",
+            value: {{ nettk6 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs7 = {
+            label: "net weight [lb] \n LN2 Krios 7",
+            value: {{ nettk7 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs8 = {
+            label: "net weight [lb] \n LN2 Glacios",
+            value: {{ nettk8 }},
+            min: 0,
+            max: 350,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            levelColors: ["#ff0000", "#88ad07", "#a9d70b"],
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            relativeGaugeSize: true
+        }
+
+        var defs22 = {
+            label: "label",
+            value: 35,
+            min: 0,
+            max: 320,
+            decimals: 0,
+            gaugeWidthScale: 0.6,
+            pointer: true,
+            pointerOptions: {
+                toplength: 5,
+                bottomlength: 15,
+                bottomwidth: 2
+            },
+            counter: true,
+            donut: true,
+            relativeGaugeSize: true
+        }
+
+        jg1 = new JustGage({
+            id: "jg1",
+            defaults: defs1
+        });
+
+        jg2 = new JustGage({
+            id: "jg2",
+            defaults: defs2
+        });
+
+        jg3 = new JustGage({
+            id: "jg3",
+            defaults: defs3
+        });
+
+        jg4 = new JustGage({
+            id: "jg4",
+            defaults: defs4
+        });
+
+        jg5 = new JustGage({
+            id: "jg5",
+            defaults: defs5
+        });
+
+        jg6 = new JustGage({
+            id: "jg6",
+            defaults: defs6
+        });
+
+        jg7 = new JustGage({
+            id: "jg7",
+            defaults: defs7
+        });
+
+        jg8 = new JustGage({
+            id: "jg8",
+            defaults: defs8
+        });
+
+    });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+   <head>
+	<link rel="stylesheet" href='../static/style1.css'/>
+
+        {% block contentA%}{% endblock %}
+
+      	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         	<div class="overlay-content">
+	    		<a href="/"> Faciliy overview </a>
+	    		<a href="/uptime"> System overview </a>
+	    		<a href="/uptime/January">January </a>
+	    		<a href="/uptime/February">February </a>
+	    		<a href="/uptime/March">March</a>
+	    		<a href="/uptime/April">April</a>
+	    		<a href="/uptime/May">May </a>
+	    		<a href="/uptime/June">June </a>
+	    		<a href="https://drive.google.com/file/d/1imRaIXRE11iW5sp-08cAKfEN_puaiD_W/view?usp=sharing"> Details </a>
+		</div>
+	</div>
+   </head>
+   <body>
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<img src="..\static\images\semc-logo-new.png" alt="Italian" class="center">
+        {% block contentB%}{% endblock %}
+	<br>
+	<hr>
+	<p> @2021 Developed by NYSBC.org</p>
+	<hr>
+	<br>
+	<br>
+	<script>
+   		function openNav() {
+      			document.getElementById("myNav").style.width = "100%"; }
+   		function closeNav() {
+      			document.getElementById("myNav").style.width = "0%";   }
+	</script>
+   </body>
+</html>

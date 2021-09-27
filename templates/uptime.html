@@ -1,0 +1,203 @@
+{% extends "base1.html" %}
+
+{% block contentA%}<html>
+      <title>System status overview</title>
+
+	<script>
+	<!--
+	function timedRefresh(timeoutPeriod) {
+		setTimeout("location.reload(true);",timeoutPeriod);
+	}
+
+	window.onload = timedRefresh(3000000); //   -->
+	</script>
+{% endblock %}
+
+{% block contentB%}
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 5px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<div>
+<h1 style="text-align:center;">Electron Microscopes</h1>
+<h3 style="text-align:center;">System status overview</h3>
+
+<table id="myTable">
+    <tr class="header">
+    <th style="width:10%;">System</th>
+    <th style="width:30%;">Status</th>
+    <th style="width:30%;">Next Steps</th>
+    <th></th>
+    </tr>
+
+        {% for update in updates %}
+  	<tr>
+	{% if update.down %} 
+         	<td style="background-color:#FFECD9"> {{ update.system }} - down</td>
+	{% else %} 
+         	<td style="background-color:#E7FFD9"> {{ update.system }} - up </td>
+	{% endif %}
+	<td> {{ update.status }} </td>
+	<td> {{ update.step }} </td>
+    	<td> <a href= {{update.link }} class="button">edit</a> </td>
+	</tr>
+        {% endfor %}
+
+</table>
+<h2 style="text-align:center;">scroll down </h2>
+<h4 style="text-align:center;">Last HealthMonitor Reading: {{ time }}</h4>
+</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="parallax"></div>
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k1" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k1" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k1" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k2" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k2" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k2" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k3" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k3" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k3" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k4" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k4" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k4" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k5" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k5" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k5" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k6" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k6" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k6" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k7" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k7" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k7" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+	<br>
+	<br>
+	<img src="/plot/bars/k8" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/pie/k8" alt=".....Uptime data coming soon....." width="45%">
+	<img src="/plot/thruput/k8" alt=".....Uptime data coming soon....." width="45%">
+	<div class="parallax"></div>
+
+
+	<div style="height:800px;background-color:OldLace;font-size:16px">
+	<br>
+	<hr>
+	<span style="font-size:32px;cursor:pointer" onclick="openNav()">&#9776;  menu </span>
+	<hr>
+
+	<h1> System Monitor - large data analysis </h1>
+	<br>
+	<hr>	
+	<h3> 
+		Last Sensors Reading: {{ time }} ==> <a href="/uptime/" class="button">REFRESH</a>
+		<br>
+		<br>
+	     	Data is up to date - connected by Raspberry PI 
+		<br>
+
+
+	</h3>
+	<br>
+	<hr>
+	<div class="parallax"></div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="..\static\images\definition.png" alt="Italian" class="center2" >
+	<br>
+	<br>
+	<br>
+	<div class="parallax"></div>
+
+
+
+{% endblock %}
+

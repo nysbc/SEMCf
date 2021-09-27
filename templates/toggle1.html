@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+
+   <head>
+	<link rel="stylesheet" href='../../../static/style1.css'/>
+	<title>Facility status overview </title>
+
+  </head>
+   <body>
+	<br>
+	<hr>
+	<hr>
+	<br>
+	<img src="../../../static/images/semc-logo-new.png" alt="Italian" class="center">
+	<hr>
+	<br>
+
+<table style="width:100%" text-align: right>
+	
+
+  <tr> <th> <img src="../../../static/images/gen3a-1.png" alt=".....Almost ....." width="10%" > </th>
+	<th> </th> </tr>
+
+  <tr><td></td>
+	<td>
+			{% if  downk1   == 0 %} 
+			<a href="/toggle/k1/down">
+	<img src="../../../static/images/green.png"  width="50px"> </a>
+	<h2> Krios 1 -up- </h2>
+
+			{% else %} 
+			<a href="/toggle/k1/up">
+	<img src="../../../static/images/red.png"   width=50px> </a>
+	<h2> Krios 1 -dn- </h2>
+			{% endif %}
+	</td>
+	<td>
+			{% if  downk2   == 0 %} 
+			<a href="/toggle/k2/down">
+	<img src="../../../static/images/green.png"  width=50px > </a>
+	<h2> Krios 2 -up- </h2>
+			{% else %} 
+			<a href="/toggle/k2/up">
+	<img src="../../../static/images/red.png"  width=50px > </a>
+	<h2> Krios 2 -dn- </h2>
+			{% endif %}
+	</td>
+	<td>
+			{% if  downk3   == 0 %} 
+			<a href="/toggle/k3/down">
+	<img src="../../../static/images/green.png"  width=50px > </a>
+	<h2> Krios 3 -up- </h2>
+
+			{% else %} 
+			<a href="/toggle/k3/up">
+	<img src="../../../static/images/red.png"  width=50px > </a>
+	<h2> Krios 3 -dn- </h2>
+			{% endif %}
+	</td>
+	<td>
+			{% if  downk4   == 0 %} 
+			<a href="/toggle/k4/down">
+	<img src="../../../static/images/green.png"  width="50px" > </a>
+	<h2> Krios 4 -up- </h2>
+
+			{% else %} 
+			<a href="/toggle/k4/up">
+	<img src="../../../static/images/red.png"  width="50px" > </a>
+	<h2> Krios 5 -dn- </h2>
+			{% endif %}
+	</td>
+   </tr>
+
+   <tr><td></td>
+	<td>
+			{% if  downk5   == 0 %} 
+			<a href="/toggle/k5/down">
+	<img src="../../../static/images/green.png"  width="50px" > </a>
+	<h2> Krios 5 -up- </h2>
+
+			{% else %} 
+			<a href="/toggle/k5/up">
+	<img src="../../../static/images/red.png"  width="50px" > </a>
+	<h2> Krios 5 -dn- </h2>
+			{% endif %}
+	</td><td>
+			{% if  downk6   == 0 %} 
+			<a href="/toggle/k6/down">
+	<img src="../../../static/images/green.png"  width="50px" > </a>
+	<h2> Krios 6 -up- </h2>
+
+			{% else %} 
+			<a href="/toggle/k6/up">
+	<img src="../../../static/images/red.png"  width="50px" > </a>
+	<h2> Krios 6 -dn- </h2>
+			{% endif %}
+	</td><td>
+			{% if  downk7   == 0 %} 
+			<a href="/toggle/k7/down">
+	<img src="../../../static/images/green.png"  width="50px" > </a>
+	<h2> Krios 7 up </h2>
+
+			{% else %} 
+			<a href="/toggle/k7/up">
+	<img src="../../../static/images/red.png"  width="50px" > </a>
+	<h2> Krios 7 -dn- </h2>
+			{% endif %}
+	</td><td>
+			{% if  downk8   == 0 %} 
+			<a href="/toggle/k8/down">
+	<img src="../../../static/images/green.png"  width="50px" > </a>
+	<h2> Glacios up </h2>
+			{% else %} 
+			<a href="/toggle/k8/up">
+	<img src="../../../static/images/red.png"  width="50px" > </a>
+	<h2> Glacios -dn- </h2>
+			{% endif %}
+	</td>
+  </tr><
+     
+</table>
+
+	<hr>
+	<hr>
+
+	<div class="parallax"></div>
+	<div style="height:1000px;background-color:OldLace;font-size:16px">
+
+	<p> @2021 Developed by NYSBC.org</p>
+
+   </body>
+</html>
